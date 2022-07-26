@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	     <title>Lista do SOE</title>
+	     <title>Módulo de Autenticação Web</title>
 
 		 <style>
 			body {
@@ -21,48 +21,64 @@
 				color: white;
 			}			
 			section {
-				background-color: rgb(39, 36, 36);
+				background-color: rgb(39, 37, 37);
 				height: 350px;
-				width: 450px;
-				margin-left: 300px;
+				width: 350px;
+				/*margin-left: 750px;*/
 				margin-top: 300px;
-				padding: 45px;	
-				border-radius: 5px;			
+				padding: 35px;	
+				border-radius: 5px;		
 			}
 			img#logo {
 				width: 165px;
-				margin-left: 150px;
+				margin-left: 100px;
 			}
-			input#checar {
-				text-align: left;
+			input#checar {			
+				height: 15px;
+				width: 15px;
 			}
 			div#logar {
-				text-align: right;
+				text-align: center;
+				text-height: 20px;
 				margin-top: 50px;
+				margin-left: 250px;
+				padding-top:5px;
+				border: 1px solid white;
+				border-radius: 3px;
+				width: 110px;
+				height: 27px;
 			}
 			input#login, #senha {
 				border-radius: 5px;
 			}
+			div#elementos {
+				
+			}
 		 </style>
 	</head>
 
-	<body>
+  <body>
 	<section>
-	   <form method="post" action="sucesso.html">
+	   <form method="post" action="sucesso.html" onsubmit="return validar()">
 		    <div><img src="imagens/logoxp.png" id="logo"></div>		
+
 	      <div id="cadastro">
 			<strong>E-mail</strong><br> <input type="text" name="login" id="login"><br>
  	      	<strong>Senha</strong><br> <input type="password" name="senha" id="senha">
 		  </div>
+		  <input type="submit" value="enviar">
+
 		  <div id="logar">
-	      <a href="https://online.igiti.com.br/telainicial">Login<br>
+	      <!--<a href="https://online.igiti.com.br/telainicial">Login<br>-->
 		  </div>
-		  <input type="checkbox" name="checar" id="checar">Continuar Conectado<br>
-		
-		  <a href="https://online.igti.com.br/login/canvas">Cadastrar ou recuperar senha</a>
+		  <div id="elementos">
+		  <input type="checkbox" name="checar" id="checar">Continuar Conectado<br>	
+		  <a href="https://youtube.com.br">Cadastrar ou recuperar senha</a>
+		</div>
 		</form>
 	</section>
- 
-	</body>
+
+	<script src="valida.js"></script>
+  </body>
 
 </html>
